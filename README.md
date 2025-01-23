@@ -35,7 +35,7 @@ To install this project from GitHub, follow these steps:
 
 2. Navigate to the project directory:
     ```sh
-    cd disinformation-narratives
+    cd TrueFlag
     ```
 
 ## Deployment with Docker
