@@ -5,7 +5,7 @@
 The Disinformation Narratives project aims to identify and analyze disinformation narratives across various media platforms. By leveraging machine learning and natural language processing techniques, this project seeks to uncover patterns and provide insights into the spread of false information.
 
 ## Repository Structure
-
+```
 .
 ├── Disinformation narratives storytelling (banking)- Reviewed.docx
 ├── docker-compose.yaml
@@ -22,6 +22,7 @@ The Disinformation Narratives project aims to identify and analyze disinformatio
 │       ├── x-related-factchecks.csv
 │       ├── x-toxicity_attacks.csv
 ├── README.md
+````
 
 ## Installation
 
