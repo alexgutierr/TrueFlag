@@ -30,7 +30,7 @@ To install this project from GitHub, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone [<repository-url>](https://github.com/alexgutierr/disinformation-narratives.git)
+    git clone [<https://github.com/alexgutierr/disinformation-narratives.git>](https://github.com/alexgutierr/disinformation-narratives.git)
     ```
 
 2. Navigate to the project directory:
