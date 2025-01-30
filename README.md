@@ -79,8 +79,8 @@ Metabase is available at http://localhost:3000.
 pgAdmin is available at http://localhost:5050.
 
 - Login credentials:
--- Email: admin@admin.com
--- Password: admin
+    - Email: admin@admin.com
+    - Password: admin
 
 ### ETL Process
 
