@@ -95,4 +95,4 @@ Load the content of the CSV files into the databse creating the tables if they d
 To run the ETL process manually, you can use the following command:
 ```sh
 docker-compose run etl
-```sh
+```
