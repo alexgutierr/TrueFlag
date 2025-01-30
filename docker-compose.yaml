@@ -1,0 +1,56 @@
+services:
+  
+  # OLAP Database service (PostgreSQL as an example)
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: analytics
+      POSTGRES_USER: etl_user
+      POSTGRES_PASSWORD: etl_password
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # ETL service with Python
+  etl:
+    build: ./etl/app
+    volumes:
+      - ./etl/data:/data
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=analytics
+      - DB_USER=etl_user
+      - DB_PASSWORD=etl_password
+    depends_on:
+      - db
+    command: python etl.py
+  
+  # BI Tool (Metabase for visualization)
+  metabase:
+    image: metabase/metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: analytics
+      MB_DB_PORT: 5432
+      MB_DB_USER: etl_user
+      MB_DB_PASS: etl_password
+      MB_DB_HOST: db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+      
+volumes:
+  pg_data:
