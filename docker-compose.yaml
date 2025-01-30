@@ -41,6 +41,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    volumes:
+      - metabase-data:/metabase-data
 
   pgadmin:
     image: dpage/pgadmin4
@@ -54,3 +56,4 @@ services:
       
 volumes:
   pg_data:
+  metabase-data:
