@@ -71,8 +71,8 @@ psql -h localhost -p 5432 -U etl_user -d analytics
 
 Metabase is available at http://localhost:3000.
 - Login credentials:
--- Email: 4lexgv@gmail.com
--- Password: trueflag1
+    - Email: 4lexgv@gmail.com
+    - Password: trueflag1
 
 ### pgAdmin
 
