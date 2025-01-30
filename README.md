@@ -82,7 +82,7 @@ pgAdmin is available at http://localhost:5050.
     - Email: admin@admin.com
     - Password: admin
 
-### ETL Process
+### ETL Process
 
 The ETL process is defined in the etl.py script. It performs the following steps:
 
